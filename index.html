@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini Social</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Mini Social 📱</h2>
+
+<div id="auth">
+  <input id="usernameInput" placeholder="Choose a username"><br><br>
+  <input id="avatarInput" placeholder="Profile image URL"><br><br>
+  <button onclick="login()">Login / Create</button>
+</div>
+
+<div id="app" style="display:none;">
+  <p>
+    <img id="userAvatar" width="40" height="40" style="border-radius:50%; vertical-align:middle;">
+    <b id="currentUser"></b>
+  </p>
+  <button onclick="logout()">Logout</button>
+  <br><br>
+
+  <textarea id="postText" placeholder="What's on your mind?"></textarea><br>
+  <button onclick="addPost()">Post</button>
+
+  <div id="feed"></div>
+</div>
+
+<div id="profile" style="display:none;">
+  <button onclick="backToFeed()">⬅ Back</button>
+  <br><br>
+  <img id="profileAvatar" width="80" height="80" style="border-radius:50%;">
+  <h3 id="profileName"></h3>
+  <div id="profilePosts"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
